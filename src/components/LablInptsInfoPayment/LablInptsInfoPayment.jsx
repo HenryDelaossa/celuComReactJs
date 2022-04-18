@@ -19,7 +19,7 @@ const LablInptsInfoPayment = ({ infoFor, mapLabelInputs, optionsBancos, checkFor
                     {lb.namee !== "BancoDeOrigen" && <input
                         type="text"
                         maxLength={
-                            lb.namee === "cvv" && "3"
+                            lb.namee === "cvv" ? "3" : ""
                         }
                         id={lb.idFor}
                         value={

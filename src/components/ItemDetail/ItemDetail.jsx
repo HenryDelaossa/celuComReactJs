@@ -7,15 +7,18 @@ import ItemCount from "../ItemCount/ItemCount"
 
 
 export default function ItemDetail({ itemsDetails }) {
-    
-    const [imgChange, setImgChange] = useState()    
+
+    const [imgChange, setImgChange] = useState()
     return (
         <div className="divContentDetailsProduct" >
             <div className="divDetailsProduct">
+                <div className="titProductDetailResp">
+                    <h4>{itemsDetails.title}</h4>
+                </div>
                 <div className="ctnMiniImgsProductDiv">
                     {itemsDetails.imgOthers && itemsDetails.imgOthers.map((im, i) =>
                         <div className="miniImgsProductDivs" key={i} onMouseEnter={() => setImgChange(i)}>
-                            <img src={im} alt={`tienda celucommerce`}/>
+                            <img src={im} alt={`tienda celucommerce`} />
                         </div>)}
                 </div>
                 <div className="divTitImgDetail">

@@ -25,10 +25,11 @@ export default function Cart() {
                         <div className="divCtnItemsPedido">
                             <h2 >tu pedido</h2>
                             <CartItmsAdded productsToAdd={cartItm} />
-                            <TheCarousel />
                         </div>
                 }
             </div>
+            
+            <TheCarousel />
         </>
     )
 }
