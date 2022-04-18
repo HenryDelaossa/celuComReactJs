@@ -7,12 +7,12 @@ import { useEffect } from "react"
 import { scrollArriba } from "../../Helpers/Helpers"
 
 export default function ItemDetailContainer() {
-    scrollArriba()
 
     const { idBrand } = useParams()
     const { charge, infoDetails, getDataDetailIndividual } = useFirestore()
     useEffect(() => {
         getDataDetailIndividual({ id: idBrand });
+        scrollArriba()
     }, [getDataDetailIndividual, idBrand]);
 
     return (

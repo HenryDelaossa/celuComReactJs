@@ -5,9 +5,13 @@ import Banners from "../Banners/Banners";
 import TheCarousel from "../Carousel/Carousel";
 import CartItmsAdded from "./CartItmsAdded"
 import { scrollArriba } from "../../Helpers/Helpers"
+import { useEffect } from "react"
+
 
 export default function Cart() {
-    scrollArriba()
+    useEffect(() => {
+      scrollArriba()
+    }, [])
     const { cartItm } = useContext(CarrrContext);
     return (
         <>
